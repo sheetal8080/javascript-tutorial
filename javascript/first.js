@@ -454,4 +454,4 @@ console.log(sum); // Output: 46
     });
     
     console.log(sum); // Output: 34
-    }
+}
