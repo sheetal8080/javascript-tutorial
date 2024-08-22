@@ -130,7 +130,7 @@ else{
 //Ternary Operator
 // condition ? trueoutput : falseoutput
 {
-let age = 90;
+let age = 9;
 let result = age>18 ? "adult" :"not adult";
 console.log(result);
 }
@@ -435,7 +435,7 @@ console.log(newArr);
     console.log(newArr);
 }
 
-// perform some operations & reduces the array to a single value. It returns that single value.
+// 3. REDUCE:- perform some operations & reduces the array to a single value. It returns that single value.
 {
 const numbers = [1, 2, 34, 4, 5];
 
