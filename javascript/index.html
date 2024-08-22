@@ -1,14 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <h1>
-        hey, I am learning javascript.
-    </h1>
+    <title>Google</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .logo {
+            margin-top: 150px;
+        }
+        .search-bar {
+            margin-top: 20px;
+        }
+        .search-bar input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            box-shadow: none;
+            outline: none;
+        }
+        .search-bar input[type="text"]:focus {
+            border-color: #4285f4;
+        }
+        .search-bar input[type="submit"] {
+            padding: 10px 20px;
+            margin-top: 20px;
+            margin-left: 10px;
+            font-size: 14px;
+            border: 1px solid #dfe1e5;
+            border-radius: 4px;
+            background-color: #f8f9fa;
+            cursor: pointer;
+        }
+        .search-bar input[type="submit"]:hover {
+            background-color: #f1f3f4;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="logo">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google Logo">
+    </div>
+
+    <div class="search-bar">
+        <form action="#">
+            <input type="text" name="q" placeholder="Search Google or type a URL">
+            <input type="submit" value="Google Search">
+        </form>
+    </div>
+
     <script src="first.js"></script>
 </body>
 </html>

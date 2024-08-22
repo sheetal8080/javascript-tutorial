@@ -1,4 +1,3 @@
-
 // arithmetic operator
 { 
 let a = 3;
@@ -248,3 +247,211 @@ while(userNum !== gameNum) {
 }
 console.log("congratulations, you entered the right number");
 
+//STRING
+//  1. CREATE STRING
+{let str = "sheetal tripathi";
+//  2. STRING LENGTH
+console.log(str.length);
+// 3. STRING INDICES
+console.log(str[1], str[2], str[3] );
+}
+// Template literals
+// e.g. ${obj.item},${obj.price}
+{
+let obj = {
+    item : "pen",
+    price : 10,
+}
+let output = `The cost of ${obj.item} is ${obj.price} rupees`;
+console.log(output);
+}
+
+
+// escape character
+// e.g:----- \n and \t  and \n is considered as single character while getting its length. 
+
+// 1. str.toUpperCase()
+// 2. str.toUpperCase()
+// 3. str.trim()
+// 4. str.slice(0 , 4)
+// 5. str1.concat(str2)
+// 5. str.replace(currentValue, newValue)
+let str1 = "Sheetal\tTripathi";
+let str2 = "    Sheetal Tripathi    JS    ";
+let newString = str1.toUpperCase() // same:- str.toLowerCase()
+console.log (newString);
+console.log (str2);
+console.log (str2.trim());
+console.log (str2.slice( 0,4));
+let res = str1.concat(str2);
+console.log(res);
+let greet="hello"
+console.log(greet.replace("he","go"));
+
+// ARRAYS
+{
+let name = ["rahul", "raja", "ram", "raj", "rani", "raha"];
+let marks =[54, 66,84, 93, 92, 74]
+console.log(marks);
+console.log(marks.length);
+
+// for( let i=0; i < name.length; i++){
+    // console.log(name[i]);
+// }
+for (let el of name) {
+    console.log(el.toUpperCase());
+}
+}
+// array with student's marks and find the average marks of entire class.
+{
+let mark =[85,97,44,37,76,60];
+let sum = 0;
+for(let value of mark){
+    sum+=value;
+}
+console.log(sum);
+let avg = sum/mark.length;
+console.log(avg);
+}
+
+// Array eith price of 5 items. all the items have an offer of 10% off on them, change the array to store final prices after applying offer.
+{
+let price =[250, 645, 300, 900,50];
+index = 0;
+for(let values of price){
+    values = (values/100)*90;
+    console.log(`values at ${index} is ${values}`);
+    index++;
+}
+}
+
+
+//FUNCTIONS
+{
+function sum(a,b){
+    console.log(sum = a+b) ;
+}
+sum(3,5);
+}
+
+// or we can write it using return...
+{
+    function sum(a,b){
+        s = a+b ;
+        return s;
+    }
+    let val= sum(7,8);
+    console.log(val);
+}
+
+{
+    function mul(a,b){
+        s = a*b ;
+        return s;
+    }
+    let val= mul(7,8);
+    console.log(val);
+}  
+//Arrow function
+const arrowSum =(a,b) => {
+    console.log(a+b);
+}
+arrowSum(9,2);
+
+const arrowMul =(a,b) => {
+    console.log(a*b);
+}
+arrowMul(9,2);
+
+// write a function in javascript to return the count of vowels in string.
+function countVowels(str) {
+    // Define the vowels
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+
+    // Initialize a counter
+    let count = 0;
+
+    // Loop through each character in the string
+    for (let char of str) {
+        // Check if the character is a vowel
+        if (vowels.includes(char)) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+// Example usage:
+console.log(countVowels("aeiouAEIOUMGAIJAOAL")); // Output: 15
+
+// same function using arrowFunction
+const countVowel = (str) => {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    return [...str].filter(char => vowels.includes(char)).length;
+};
+
+// Example usage:
+console.log(countVowel("Hello World!")); // Output: 3
+
+// ForEach Loop in arrays
+{
+let arr = [1,2,3,4,5];
+arr.forEach(function printVal(val){
+    console.log(val);
+});
+}
+let arr = ["maharashta","delhi","kerala","Goa","Bihar"];
+arr.forEach((val)=>{
+    console.log(val.toUpperCase()); 
+}
+);
+
+//print the square of each value of Array using the forEach loop.
+let nums =[1,2,3,4,45];
+nums.forEach((val)=>{
+    val= val*val;
+    console.log(val);
+}
+);
+
+// some more Array methods
+//1. MAP:- creates a new array with the results of some operation. The value its callback returns are used to form new array.
+// arr.map(callbackFnx(value, index, array))
+{
+let arr = [9,3,59,30,14];
+let newArr = arr.map((val)=>{
+    return val*2;
+});
+console.log(newArr);
+}
+
+// 2. FILTER :- creates new array of elements that give true for a condition/filter. e.g. all even elements.
+{
+    let arr = [9,3,59,30,14];
+    let newArr = arr.filter((val)=>{
+        return val%2===0;
+    });
+    console.log(newArr);
+}
+
+// perform some operations & reduces the array to a single value. It returns that single value.
+{
+const numbers = [1, 2, 34, 4, 5];
+
+const sum = numbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
+});
+
+console.log(sum); // Output: 46
+}
+
+{
+    const numbers = [1, 2, 34, 4, 5];
+    
+    const sum = numbers.reduce((accumulator, currentValue) => {
+        return accumulator > currentValue? accumulator: currentValue;
+    });
+    
+    console.log(sum); // Output: 34
+    }
