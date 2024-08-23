@@ -1,3 +1,4 @@
+/*
 // arithmetic operator
 { 
 let a = 3;
@@ -455,3 +456,16 @@ console.log(sum); // Output: 46
     
     console.log(sum); // Output: 34
 }
+*/
+
+// Objects
+
+const students  = {
+    saksham : 98,
+    vinit : 52,
+    dheeraj:80,
+    printValue(){
+        console.log("saksham's marks is", students.saksham);
+    }
+};
+students.printValue();
